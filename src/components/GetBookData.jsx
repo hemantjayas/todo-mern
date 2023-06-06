@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './getBookData.css';
 import { getAllBook, deleteBook } from '../redux/actions/action';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +8,6 @@ export const GetBookData = () => {
 
     const allData = useSelector((state) => state.books);
 
-    console.log(allData)
     useEffect(() => {
         dispatch(getAllBook())
     }, [])
@@ -33,7 +32,7 @@ export const GetBookData = () => {
                             <td>{item.bookname}</td>
                             <td>{item.author}</td>
                             <td><button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
-                            <td><button className="btn btn-danger" onClick={()=>{dispatch(deleteBook(item._id))}}>Delete</button></td>
+                            <td><button className="btn btn-danger" onClick={() => { dispatch(deleteBook(item._id)) }}>Delete</button></td>
                         </tr>
                     ))}
 
