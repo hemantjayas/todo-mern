@@ -1,0 +1,5 @@
+.form_style{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}

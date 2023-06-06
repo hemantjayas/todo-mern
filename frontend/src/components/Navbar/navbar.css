@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.navbar>h3 {
+    width: 20%;
+    margin: 0;
+    cursor: pointer;
+    
+}
+
+.nav_list {
+    display: flex;
+    column-gap: 5%;
+    width: 80%;
+    align-items: center;
+    margin: 0;
+
+}
+.nav_list li {
+ font-weight: 600;
+ cursor: pointer;
+}
