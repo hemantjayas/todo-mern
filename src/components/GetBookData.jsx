@@ -8,10 +8,9 @@ export const GetBookData = () => {
 
     const allData = useSelector((state) => state.books);
 
-    useEffect(() => {
+    useEffect((dispatch) => {
         dispatch(getAllBook())
     }, [])
-
 
     return (
         <div className='bookdata'>
